@@ -52,7 +52,8 @@ import static com.andrei1058.bedwars.BedWars.*;
 public class OreGenerator implements IGenerator {
 
     private Location location;
-    private int delay = 1, upgradeStage = 1, lastSpawn, spawnLimit = 0, amount = 1;
+    private double delay = 1, lastSpawn;
+    private int upgradeStage = 1, spawnLimit = 0, amount = 1;
     private IArena arena;
     private ItemStack ore;
     private GeneratorType type;
@@ -357,7 +358,7 @@ public class OreGenerator implements IGenerator {
     }
 
     @Override
-    public void setDelay(int delay) {
+    public void setDelay(double delay) {
         this.delay = delay;
     }
 
@@ -482,12 +483,12 @@ public class OreGenerator implements IGenerator {
     }
 
     @Override
-    public int getDelay() {
+    public double getDelay() {
         return delay;
     }
 
     @Override
-    public int getNextSpawn() {
+    public double getNextSpawn() {
         return lastSpawn;
     }
 
@@ -497,7 +498,7 @@ public class OreGenerator implements IGenerator {
     }
 
     @Override
-    public void setNextSpawn(int nextSpawn) {
+    public void setNextSpawn(double nextSpawn) {
         this.lastSpawn = nextSpawn;
     }
 

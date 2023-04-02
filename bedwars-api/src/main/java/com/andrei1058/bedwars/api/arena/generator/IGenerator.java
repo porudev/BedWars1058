@@ -77,7 +77,7 @@ public interface IGenerator {
     /**
      * Change item spawn delay. In seconds.
      */
-    void setDelay(int delay);
+    void setDelay(double delay);
 
     /**
      * Set how many items should the generator spawn at once.
@@ -142,12 +142,12 @@ public interface IGenerator {
     /**
      * Get spawn rate delay.
      */
-    int getDelay();
+    double getDelay();
 
     /**
      * Get seconds before next item spawn.
      */
-    int getNextSpawn();
+    double getNextSpawn();
 
     /**
      * Get the spawn limit of the generators.
@@ -159,7 +159,7 @@ public interface IGenerator {
     /**
      * Set the remaining time till the next item spawn.
      */
-    void setNextSpawn(int nextSpawn);
+    void setNextSpawn(double nextSpawn);
 
     /**
      * Should the dropped items be stacked?
